@@ -1,0 +1,73 @@
+﻿
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PATIENT</title>
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" charset="UTF-8" href="./styles/styles.css">
+    <script src="./modules/jquery-3.3.1.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Patient card:</h1>
+    <table>
+      <tr>
+        <td rowspan="4"><canvas id="rqcode"></canvas></td>
+        <td>First name: </td>
+        <td><input type="text" id="firstName" /></td>
+      </tr>
+      <tr>
+        <td>Second name: </td>
+        <td><input type="text" id="secondName" /></td>
+      </tr>
+      <tr>
+          <td>Last name: </td>
+          <td><input type="text" id="lastName" /></td>
+      </tr>
+      <tr>
+          <td>Date of Birth: </td>
+          <td><input type="text"  id="birthDate"/></td>
+      </tr>
+    </table>
+
+    <h1>Medical Hisotory:</h1>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Service</th>
+        <th>Doctor</th>
+      </tr>
+      <tr>
+          <td>01-01-2018</td>
+          <td>Service 01</td>
+          <td>Doctor 1</td>
+      </tr>
+      <tr>
+          <td>01-01-2018</td>
+          <td>Service 02</td>
+          <td>Doctor 2</td>
+      </tr>
+      <tr>
+          <td>01-01-2018</td>
+          <td>Service 03</td>
+          <td>Doctor 3</td>
+      </tr>
+      <tr>
+          <td>01-01-2018</td>
+          <td>Service 04</td>
+          <td>Doctor 4</td>
+      </tr>
+    </table>
+    <input type="button" value="Save as a new patient" id="save" />
+    <input type="button" onclick="window.location = './patient.html'" value="New (clear)" />
+    <input type="button" value="Delete" id="delete" />
+    <input type="button" onclick="window.location = './scanner.html'" value="Back to Patients" />
+
+    <div class="system">
+        <a href="https://api.mlab.com/api/1/databases/ilyabulychev/collections/qrcodes?apiKey=i8dWtPvSsw7NR7H7FSbP3RXCgs1IJfBT" target="_blank">System: DataBase</a>
+    </div>
+  
+    <script src="./modules/qr-reader.js"></script>
+    <script src="./scripts/patient.page.js"></script>
+  </body>
+</html>
