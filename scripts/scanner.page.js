@@ -74,6 +74,7 @@ function tick() {
         outputMessage.hidden = true;
         outputData.parentElement.hidden = false;
         outputData.innerText = code.data;
+        window.location = code.data;
     } else {
         outputMessage.hidden = false;
         outputData.parentElement.hidden = true;
