@@ -22,7 +22,7 @@ $(document).ready(function(){
             $("#lastName").val(data.lastName);
             $("#birthDate").val(data.birthDate);
 
-            QRCode.toCanvas(document.getElementById('rqcode'), window.location.pathname + '?id=' + data._id.$oid, function (error) {
+            QRCode.toCanvas(document.getElementById('rqcode'), window.location.href, function (error) {
             if (error) console.error(error)
                 console.log('success!');
             })
