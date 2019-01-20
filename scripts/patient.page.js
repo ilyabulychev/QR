@@ -35,6 +35,10 @@ $(document).ready(function(){
         } });
     }
 
+    $('#medicalcard').on('click', function() {
+        window.location = './title.html?id=' + id;
+    });
+
     $('#save').on('click', function() {
 
         $.ajax( { url: "https://api.mlab.com/api/1/databases/ilyabulychev/collections/qrcodes?apiKey=i8dWtPvSsw7NR7H7FSbP3RXCgs1IJfBT",
