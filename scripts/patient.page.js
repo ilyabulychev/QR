@@ -22,6 +22,11 @@ $(document).ready(function(){
             $("#lastName").val(data.lastName);
             $("#birthDate").val(data.birthDate);
 
+            $("#gender").val(data.gender);
+            $("#age").val(data.age);
+            $("#height").val(data.height);
+            $("#weight").val(data.weight);
+
             QRCode.toCanvas(document.getElementById('rqcode'), window.location.href, function (error) {
             if (error) console.error(error)
                 console.log('success!');
@@ -37,7 +42,12 @@ $(document).ready(function(){
               firstName : $("#firstName").val(),
               secondName: $("#secondName").val(),
               lastName: $("#lastName").val(),
-              birthDate: $("#birthDate").val()
+              birthDate: $("#birthDate").val(),
+
+              gender: $("#gender").val(),
+              age: $("#age").val(),
+              height: $("#height").val(),
+              weight: $("#weight").val(),
             } ),
 		  type: "POST",
           contentType: "application/json",
